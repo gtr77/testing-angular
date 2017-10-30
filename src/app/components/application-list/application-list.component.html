@@ -1,0 +1,22 @@
+<!-- <div class="categories" *ngFor="let app of apps.data.children; let i = index">
+  <h3 *ngIf="app.data.advertiser_category">{{ app.data.advertiser_category }}</h3>
+  <img [src]="app.data.banner_img"/>
+</div> -->
+<div class="">
+  <h1 class="animated fadeIn fast">Aplications</h1>
+  <!-- <div class="hovereffect animated fadeIn fast" *ngFor="let app of apps.data.children">
+    <img class="img-responsive" *ngIf="app.data.banner_img" [src]="app.data.banner_img" alt="">
+    <div class="overlay">
+      <h2>{{ app.data.advertiser_category }}</h2>
+      <p><a href="#">SEE THE APP HERE</a></p>
+    </div>
+  </div> -->
+  <div class="hovereffect animated fadeIn" *ngFor="let app of apps.data.children">
+    <img class="img-responsive"
+    [src]="app.data.banner_img ? app.data.banner_img : 'http://www.salesplusprofit.com/wp-content/uploads/2017/05/white-background-sparkle.jpg' ">
+    <div class="overlay" [ngClass]="{ 'empty-state': !app.data.banner_img }">
+      <h2>{{ app.data.advertiser_category ? app.data.advertiser_category : "Unknown Category" }}</h2>
+      <p><a href="#">SEE THE APP HERE</a></p>
+    </div>
+  </div>
+</div>
