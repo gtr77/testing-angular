@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ApplicationListComponent } from './components/application-list/application-list.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ApplicationDetailComponent } from './components/application-detail/application-detail.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     AppComponent,
     HomeComponent,
     ApplicationListComponent,
-    SidebarComponent
+    SidebarComponent,
+    ApplicationDetailComponent
   ],
   imports: [
     BrowserModule,
